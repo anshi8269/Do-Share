@@ -1,0 +1,22 @@
+{% load static %}
+
+
+  {%if request.user.is_authenticated%}
+    {% include "ecom/customer_navbar.html" %}
+  {%else%}
+    {% include "ecom/navbar.html" %}
+  {%endif%}
+
+
+  {%block content%}
+
+  {%endblock content%}
+  <script>
+  AOS.init();
+  </script>
+  {% include "ecom/allscript.html" %}
+  
+  
+  
+ 
+

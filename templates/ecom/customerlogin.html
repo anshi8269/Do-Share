@@ -1,0 +1,97 @@
+
+{% extends 'ecom/homebase.html' %}
+{% load static %}
+<!-- login and registration page css-->
+<style>
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+</style>
+
+{% load widget_tweaks %}
+{% block content %}
+
+  
+  <section class="container vh-100 mx-auto">
+  <div class=" container-fluid h-100 p-5 ">
+    <div class="row d-flex align-items-center justify-content-center h-100">
+      <div class="col-md-8 col-lg-7 col-xl-6">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+          class="img-fluid" alt="Phone image">
+      </div>
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+        <form method="post">
+        {% csrf_token %}
+         <div class="text-center mb-5 ">
+                  <p>or sign up with:</p>
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                     <img width="50" height="50" src="https://img.icons8.com/ios/50/google-logo--v1.png" alt="google-logo--v1"/>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                     <img width="50" height="50" src="https://img.icons8.com/ios/50/facebook-new.png" alt="facebook-new"/>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/twitter--v1.png" alt="twitter--v1"/>
+                  </button>
+
+                  <button type="button" class="btn btn-link btn-floating mx-1">
+                    <img width="50" height="50" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="instagram-new--v1"/>
+                  </button>
+                </div>
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+             {% render_field form.username class="form-control form-control-lg text-secondary  rounded p-2" id="form3Example3"   placeholder="Username" %}
+            <label class="form-label p-2" for="form1Example13">Username</label>
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-4">
+            {% render_field form.password class=" form-control form-control-lg text-secondary p-2 rounded" id="form3Example3"   type="password" placeholder="Password" %}
+            <label class="form-label p-2" for="form1Example23">Password</label>
+          </div>
+
+          <div class="d-flex justify-content-around align-items-center mb-4">
+            <!-- Checkbox -->
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+              <label class="form-check-label" for="form1Example3"> Remember me </label>
+            </div>
+            
+          </div>
+
+          <!-- Submit button -->
+          <button type="submit"  href="/customer-home" class="btn btn-primary btn-lg btn-block">Sign in</button>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+          </div>
+
+          <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="/customersignup"
+            role="button">
+            <i  href="" class="fab fa-facebook-f me-2"></i>Register With Us
+          </a>
+          
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+    
+  <
+{% endblock content %}

@@ -1,0 +1,30 @@
+{% extends 'ecom/customer_base.html' %}
+{% load static %}
+
+{% block content %}
+<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+
+    
+    <div class="container-fluid pt-5  p-5 mx-auto">
+         <div class=" h3 mt-5 text-center alert alert-primary" role="alert">
+              Payment successful!! We are delighted to inform you that we received your payments 
+          </div>
+          
+              <div class="mt-5 row text-center">
+                <div class="col-6">
+                   <button class="btn btn-primary text-white"> <a class="text-white h5" href="/my-order" class="btn-view-orders">View Orders</a></button>
+                </div>
+                <div class="col-6">
+                   <button class="btn btn-success text-white"> <a class="text-white h5" href="/customer-home">Continue Shopping</a></button>
+                </div>
+              
+              </div>
+          
+      </div>
+    
+
+
+</div>
+<br><br><br><br>
+<br><br><br><br>
+{% endblock content %}
